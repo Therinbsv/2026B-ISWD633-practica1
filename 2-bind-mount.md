@@ -26,12 +26,12 @@ El archivo index.html que existía originalmente en el directorio del contenedor
 
 ### Ir a https://html5up.net/ y descargar un template gratuito, descomprirlo dentro de tu computador en la carpeta html
 ### ¿Qué sucede al ingresar al servidor de nginx?
-Al ingresar nuevamente a http://localhost:8080, Nginx muestra la página web de la plantilla descargada que fue: Multiverse by HTML5, siempre que el archivo principal se encuentre directamente en la carpeta html y se llame index.html. Los cambios realizados en los archivos del computador se reflejan en el servidor sin necesidad de reconstruir la imagen ni crear otro contenedor.
+Al ingresar nuevamente a http://localhost:8080, Nginx muestra la página web de la plantilla descargadaNginx muestra la página web de la plantilla descargada que fue: Multiverse by HTML5. 
 
 ### Eliminar el contenedor
 docker rm -f mi_nginx
 
 ### ¿Qué sucede al crear nuevamente un contenedor montado al directorio definidos anteriormente?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+Al crear un nuevo contenedor de Nginx con el mismo bind mount, la página web de la plantilla sigue disponible porque sus archivos permanecen almacenados en la carpeta del computador y no dentro del ciclo de vida del contenedor eliminado. Esto demuestra que un bind mount permite mantener los datos y reutilizarlos entre diferentes contenedores.
 
 
