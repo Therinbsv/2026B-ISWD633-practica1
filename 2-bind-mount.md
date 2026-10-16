@@ -29,7 +29,7 @@ El archivo index.html que existía originalmente en el directorio del contenedor
 Al ingresar nuevamente a http://localhost:8080, Nginx muestra la página web de la plantilla descargadaNginx muestra la página web de la plantilla descargada que fue: Multiverse by HTML5. 
 
 ### Eliminar el contenedor
-docker rm -f mi_nginx
+docker rm -f KatheNginx
 
 ### ¿Qué sucede al crear nuevamente un contenedor montado al directorio definidos anteriormente?
 Al crear un nuevo contenedor de Nginx con el mismo bind mount, la página web de la plantilla sigue disponible porque sus archivos permanecen almacenados en la carpeta del computador y no dentro del ciclo de vida del contenedor eliminado. Esto demuestra que un bind mount permite mantener los datos y reutilizarlos entre diferentes contenedores.
