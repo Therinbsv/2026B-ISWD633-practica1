@@ -19,17 +19,17 @@ docker run -d --name <nombre contenedor> --mount type=bind,source=<ruta carpeta 
 # COMPLETAR CON EL COMANDO
 
 ### ¿Qué sucede al ingresar al servidor de nginx?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+Al ingresar a http://localhost:8080, Nginx muestra el contenido de la carpeta html del computador, que está montada en el directorio /usr/share/nginx/html del contenedor. Si la carpeta está vacía, no se visualizará la página de bienvenida habitual de Nginx y se puede obtener un error 403 Forbidden.
 
 ### ¿Qué pasa con el archivo index.html del contenedor?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+El archivo index.html que existía originalmente en el directorio del contenedor queda oculto mientras la carpeta del host esté montada sobre /usr/share/nginx/html. Docker no lo elimina de la imagen; simplemente deja de estar visible en esa ruta durante el montaje. Nginx utiliza los archivos presentes en la carpeta del computador.
 
 ### Ir a https://html5up.net/ y descargar un template gratuito, descomprirlo dentro de tu computador en la carpeta html
 ### ¿Qué sucede al ingresar al servidor de nginx?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+Al ingresar nuevamente a http://localhost:8080, Nginx muestra la página web de la plantilla descargada que fue: Multiverse by HTML5, siempre que el archivo principal se encuentre directamente en la carpeta html y se llame index.html. Los cambios realizados en los archivos del computador se reflejan en el servidor sin necesidad de reconstruir la imagen ni crear otro contenedor.
 
 ### Eliminar el contenedor
-# COMPLETAR CON EL COMANDO
+docker rm -f mi_nginx
 
 ### ¿Qué sucede al crear nuevamente un contenedor montado al directorio definidos anteriormente?
 # COMPLETAR CON LA RESPUESTA A LA PREGUNTA
