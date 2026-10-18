@@ -25,7 +25,8 @@ Los dangling volumes son volúmenes en Docker que no están asociados a ningún 
 docker volume prune
 ```
 ----------
-Comandos
+### Práctica
+```
 PS C:\Users\PC-AKM> docker run -d --name ejercicio5 -v /usr/share/nginx/html nginx:alpine
 ...
 Digest: sha256:892bb2152464f0c5d8972593a5f5afaf8054552580b699d95f8ff4af08c2d33d
@@ -38,5 +39,5 @@ Are you sure you want to continue? [y/N] y
 Deleted Volumes:
 c8cfec46e8484071a1c89031fe691d6e0bc7bda8bba637d316d225a998342204
 832f2583914eb7f635d56ab7be2905322b3d3793ec8c7dc2d55589240b1f1b71
-
 Total reclaimed space: 0B
+```
